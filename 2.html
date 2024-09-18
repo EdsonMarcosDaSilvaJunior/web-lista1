@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Currículo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+        text-align: center;
+        color: #007bff;
+      }
+      h2 {
+            color: #333;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      img{
+        display: block;
+        margin-left: auto;
+        margin-right: 0%;
+        border-radius: 10%;
+      }
+      #cabecalho {
+        background: #007bff;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      #corpo {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+      #cabecalho a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+      #cabecalho a:hover {
+        text-decoration: underline;
+      }
+      #cabecalho nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      #cargo {
+        font-weight: bold;
+      }
+      #empresa {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="cabecalho">
+      <nav>
+        <a href="#dadosPessoais">Dados Pessoais</a>
+        <a href="#objetivo">Objetivo</a>
+        <a href="#formacaoAcademica">Formação Acadêmica</a>
+        <a href="#experienciaProfissional">Experiência Profissional</a>
+        <a href="#cursosComplimentares">Cursos Complementares</a>
+        <a href="#informacoesAdicionais">Informações Adicionais</a>
+      </nav>
+    </header>
+    <h1>Curriculum vitae</h1>
+<div id="corpo">
+    <div id="dadosPessoais">
+      <h2>Dados Pessoais</h2>
+      <p><strong>Nome:</strong> Edson Marcos da Silva Junior</p>
+      <p><strong>Nacionalidade:</strong> Brasileiro</p>
+      <p><strong>Estado civil:</strong> Solteiro</p>
+      <p><strong>Data de Nascimento:</strong> 14/02/2000</p>
+      <p><strong>Endereço:</strong> Rua Antônio Francisco de carvalho, 709 - Gaspar Grande - Gaspar/SC</p>
+      <p><strong>Telefone:</strong> (47) 9 9736-9162 </p>
+      <p><strong>Email:</strong> Edsonmsilvajr@gmail.com</p>
+
+    </div>
+    <div id="objetivo">
+      <h2>Objetivo</h2>
+      <p>
+        Procuro oportunidade de emprego como desenvolvedor júnior ou áreas
+        afins. Disposto a aprender novas atividades.
+      </p>
+    </div>
+    <div id="formacaoAcademica">
+      <h2>Formação Acadêmica</h2>
+      <ul>
+        <li>
+          Cursando Análise e Desenvolvimento de Sistemas - Instituto Federal de
+          Santa Catarina, Campus Gaspar - Início 2024/01. Cursando segundo
+          semestre.
+        </li>
+        <li>
+          Ensino Médio Completo Integrado com Curso Técnico em Informática -
+          Instituto Federal de Santa Catarina, Campus Gaspar - 2018.
+        </li>
+        <li>
+          Ensino Fundamental Completo - E.E.B - Norma Mônica Sabel - 2014.
+        </li>
+      </ul>
+    </div>
+    <div id="experienciaProfissional">
+      <h2>Experiência Profissional</h2>
+      <ul>
+        <li>
+          <div id="empresa">Anjo Kids Confeccoes LTDA - 01/2024 - Atual.</div>
+          <div id="cargo">Auxiliar de E-commerce.</div>
+          <p id="principaisAtividades">
+            Principais Atividades: Expedição de pedidos, organização de estoque
+            físico e virtual e auxílio na organização e limpeza da empresa.
+            Experiência com o sistema Magis5 e Bling.
+          </p>
+        </li>
+        <li>
+          <div id="empresa">
+            Full Box Servicos de Informatica LTDA – 01/2021 - 03/2023.
+          </div>
+          <div id="cargo">Desenvolvedor Junior.</div>
+          <p id="principaisAtividades">
+            Principais Atividades: Desenvolvedor de funcionalidades relacionadas
+            a gestão de produtos em armazém, revisão de códigos, suporte a
+            clientes. Desenvolvedor backend em javascript e frontend em react.
+          </p>
+        </li>
+        <li>
+          <div id="empresa">
+            Ha.Fatto Indústria e Comércio de Estofados – 06/2019 - 01/2021
+          </div>
+          <div id="cargo">Modelista de Estofados</div>
+          <p id="principaisAtividades">
+            Principais Atividades: Desenhos 3D da estrutura interna de estofados
+            e modelagem de tecidos.
+          </p>
+        </li>
+        <li>
+          <div id="empresa">
+            Confecção de Estampas do Sul – 10/2018 - 03/2019
+          </div>
+          <div id="cargo">Operador de equipamento de secagem e pintura.</div>
+          <p id="principaisAtividades">
+            Principais Atividades: Operando máquina de estampagem de roupas.
+          </p>
+        </li>
+        <li>
+          <div id="empresa">IFSC GASPAR – 2017 - 2018</div>
+          <div id="cargo">Bolsista.</div>
+          <p id="principaisAtividades">
+            Principais Atividades: Desenvolvedor de código para utilização em
+            Braço Robótico. Desenvolvedor de microprocessador em C++.
+          </p>
+        </li>
+      </ul>
+
+      <div id="cursosComplimentares">
+        <h2>Cursos Complementares</h2>
+        <table>
+          
+          <tr>
+            <th>Curso</th>
+            <th>Carga horária</th>
+            <th>Situação</th>
+            <th>link para consulta</th>
+          </tr>
+          <tr>
+            <td>
+              Google Flutter e Dart Para a Construção de Apps Nativas Para iOS e
+              Android
+            </td>
+            <td>60h</td>
+            <td>Em Andamento</td>
+            <td>
+              <a href="https://www.udemy.com/course/curso-flutter/learn/lecture/17953464?start=0#overview">consulta</a></td>
+          </tr>
+          <tr>
+            <td>Java COMPLETO Programação Orientada a Objetos + Projetos</td>
+            <td>54,5h</td>
+            <td>Completo</td>
+            <td><a href="https://www.udemy.com/course/java-curso-completo/learn/lecture/10566010?start=0#overview">consulta</a></td>
+          </tr>
+          <tr>
+            <td>Crie uma Web API com .NET + EF Core + Docker</td>
+            <td>15h</td>
+            <td>Em Andamento</td>
+            <td><a href="https://www.udemy.com/course/criando-web-api-com-aspnet-core-31-ef-core-31/learn/lecture/19198088?start=0#overview">consulta</a></td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <h2 id="informacoesAdicionais">Informações Adicionais</h2>
+        <ol type="1">
+          <li>Experiência em VSCODE;</li>
+          <li>Experiência em MongoDb;</li>
+          <li>Linguagem de programação C/C++;</li>
+          <li>Linguagem de programação JAVASCRIPT;</li>
+          <li>Linguagem de programação HTML;</li>
+          <li>Linguagem de programação CSS;</li>
+          <li>Linguagem de programação PYTHON;</li>
+          <li>Framework Flutter;</li>
+          <li>Framework React;</li>
+          <li>Experiência em SOLIDWORKS;</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
