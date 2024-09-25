@@ -1,3 +1,21 @@
-h1{
-    color: blueviolet;
+*{
+    margin: 0px;
+    padding: 0%;
+}
+div{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    animation: rotacao 10s linear;
+}
+@keyframes rotacao {
+    0%{rotate: 0deg;}
+    100%{rotate: 360deg;}
+}
+#box1{
+    background-color: rgb(250, 5, 238);
+}
+#box2{
+    background-color: green;
 }
