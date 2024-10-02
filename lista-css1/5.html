@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>   
+   <title>Exemplo especificidade de seletores</title>
+   <style>
+      /*regra 1*/ li{color:red;}
+      /*regra 2*/ .churras{color:green;}
+      /*regra 3*/ .fruta{color:gray}
+      /*regra 4*/ li+li.churras{color: black;}
+      /*regra 5*/ .churras[draggable="true"]{color: magenta;}
+      /*regra 6*/ #lip1,#lip2,#lip3{color:blue}
+      /*regra 7*/ #lip3.fruta{color:orange}
+      /*regra 8*/ ol>li.churras#lip5{color:purple}
+   </style>
+</head>
+<body>   
+   <ol>
+   <!--item 1--> <li id="lip0">Abacaxi - a cor esta declarada no seletor por elemento da regra 1 e nao ha seletor para o id #lip0</li>
+   <!--item 2--> <li           class="fruta">Melão - gray pois o seletor por classe é o mais especifico que o seletor por elemento definido na regra 1</li>
+   <!--item 3--> <li id="lip2" class="fruta">Pera - azul pois o seletor por id é o mais especifico que os seletores por elemento(regra 1) e seletor por classe (regra 3)</li>
+   <!--item 4--> <li id="lip3" class="fruta">Uva - laranja definida pela regra 7 pois a combinacao dos seletores #lip3 e .fruta formam um seletor mais especifico que estes seletores separadamente</li>
+   <!--item 5--> <li id="lip4" class="fruta">Maçã - cinza definida pela regra 3 pois o seletor por classe é mais especifico que seletor por elemento da regra 1 e nao ha regra com seletor #lip4</li>
+   <!--item 6--> <li           class="churras">Carne - preto definida pela regra 4 pois a soma dos pesos das regras CSS é maior que o valor da regra 3</li>
+   <!--item 7--> <li           class="churras">Linguiça - preto definida pela regra 4 pois a soma dos pesos das regras CSS é maior que o valor da regra 3</li>
+   <!--item 8--> <li id="lip7" class="churras" draggable="true">Pão de alho - magenta definida pela regra 5 pois tem o seletor por classe e por elemento que é maior que a regra 2 que é apenas o seletor por classe</li>
+   </ol>   
+</body>
+</html>
