@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+            border: 1px solid black;
+        }
+        .container{
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "nav cabecalho cabecalho"
+            "nav conteudo conteudo"
+            "nav rodape rodape"
+            ;
+            grid-template-rows: 10svh 40svh 40svh 10svh;
+
+            .header{
+                grid-area: header;
+            }
+            .navegacao{
+                grid-area: nav;
+            }
+            .conteudo{
+                grid-area: conteudo;
+            }
+            .cabecalho{
+                grid-area: cabecalho;
+            }
+            .rodape{
+                grid-area: rodape;
+            }
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="header">HEADER</div>
+    <div class="navegacao">navegação</div>
+    <div class="cabecalho">cabecalho</div>
+    <div class="conteudo">conteudo</div>
+    <div class="rodape">rodape</div>
+</body>
+</html>
