@@ -6,12 +6,21 @@
     <title>Document</title>
     <style>
         *{
-            margin:0px;
-            padding: 0px;
             border: 1px solid black;
         }
+
+        span{
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: black;
+            margin:10px;
+        }
+
         .container{
             display: grid;
+            grid-template-rows: 100px 200px 300px 200px;
             grid-template-areas: 
             "header header header"
             "nav cabecalho cabecalho"
@@ -22,6 +31,9 @@
 
             .header{
                 grid-area: header;
+                display: flex;
+                align-items: center;
+                
             }
             .navegacao{
                 grid-area: nav;
@@ -36,10 +48,11 @@
                 grid-area: rodape;
             }
         }
+    
     </style>
 </head>
 <body class="container">
-    <div class="header">HEADER</div>
+    <div class="header"><span></span><span></span><span></span></div>
     <div class="navegacao">navegação</div>
     <div class="cabecalho">cabecalho</div>
     <div class="conteudo">conteudo</div>
