@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Sortear um numero</button>
+    <p id="Resultado"></p>
+    <script>
+    
+    let intervalo1= Number.parseInt(prompt("Digite o primeiro numero do intervalo:"))
+    let intervalo2= Number.parseInt(prompt("Digite o segundo numero do intervalo:"))
+    document.querySelector("button").addEventListener("click", ()=> {
+
+        document.querySelector("#Resultado").innerHTML= Math.trunc(Math.random() * (intervalo2 - intervalo1) + intervalo1+1)
+    })
+    </script>
+</body>
+</html>
