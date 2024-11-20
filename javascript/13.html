@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            min-height: 100lvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button>Mudar cor</button>
+    <script>
+        var evento;        
+        document.querySelector("body").addEventListener("keypress", (e) => {
+            if(e.code=="Space"){
+                //document.body.style.backgroundColor=`rgb(${randColor()},${randColor()},${randColor()}`
+                document.body.style.backgroundColor=`#${randColor2()}${randColor2()}${randColor2()}`
+            }
+        })
+
+
+        function randColor(){
+            return Math.trunc(Math.random()*255 + 1);
+        }
+
+        function randColor2() {
+            return Math.trunc(Math.random()*255).toString(16);
+        }
+    </script>
+</body>
+</html>
