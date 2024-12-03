@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 100svh;
+        }
+
+        #tecla{
+            border: 1px solid black;
+            word-wrap: break-word;
+            white-space: normal;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <pre id="tecla"></pre>
+    <script>
+        let ptecla=document.querySelector('#tecla');
+        var evento;
+        document.addEventListener("keypress", (e) => {
+            e;
+            evento=e;
+            console.log(e.keyCode);
+            if(e.keyCode == 13){
+                ptecla.innerHTML;
+
+            }
+            ptecla.innerHTML+=e.key;
+        })
+</script>
+</body>
+</html>
