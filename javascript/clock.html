@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100svh;
+        }
+    </style>
+</head>
+<body>
+    <spam id="hora"></spam>
+    <spam>:</spam>
+    <spam id="minuto"></spam>
+    <spam>:</spam>
+    <spam id="segundo"></spam>
+    <spam>:</spam>
+    <spam id="milisegundo"></spam>
+
+    <script>
+        let hora = document.querySelector("#hora");
+        let minuto = document.querySelector("#minuto");
+        let segundo = document.querySelector("#segundo");
+        let milisegundo = document.querySelector("#milisegundo");
+        let agora;
+        let run = true;
+        let intervalo;
+
+        function atualizaRelogio() {
+            let agora=new Date();
+            hora.innerHTML=agora.getHours();
+            minuto.innerHTML=agora.getMinutes();
+            segundo.innerHTML=agora.getSeconds();
+            milisegundo.innerHTML=agora.getMilliseconds();
+        }
+
+        function carregaRelogio(){
+            if(run){
+                intervalo=setInterval(atualizaRelogio,1);
+                run = false;
+            }else {
+                clearInterval(intervalo);
+                run=true;
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            carregaRelogio()
+        })
+        document.addEventListener("keydown", () => {
+            carregaRelogio()
+        })
+    </script>
+</body>
+</html>
