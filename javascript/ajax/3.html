@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="piadoca"></div>
+
+    <script>
+        var divPiadoca = document.getElementById("piadoca");
+
+        fetch("https://api.chucknorris.io/jokes/random")
+        .then(response => response.json())
+        .then(data => {
+            console.log(JSON.stringify(data))
+            piada = `
+                <img id="icon" src="${data.icon_url}">
+                <p id="dtCriacao"> ${data.created_at}</p>
+                <p id="piada"> ${data.value} </p>
+            `;
+
+            divPiadoca.innerHTML=piada;
+            //return r.json()
+        })
+       
+    </script>
+</body>
+</html>
