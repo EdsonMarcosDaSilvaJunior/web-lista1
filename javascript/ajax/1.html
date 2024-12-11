@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="status"></div>
+
+    <div id="pessoas"></div>
+    <script>
+        var xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function (){
+            /*variaveis httpRequest
+            readyState status
+            0 - conexão não iniciada
+            1 - conexão aberta
+            2 - requisição enviada
+            3 - aguardando resposta
+            4 - resposta recebida
+
+            status = status da requisição HTTP 200 = ok, 404 = page not found
+            */
+           if(this.readyState == 4 && this.status == 200){
+
+               //var divStatus = document.getElementById("status");
+               //console.log(divStatus);
+               //divStatus.innerHTML="readyState: " + this.readyState + this.responseText + "status: " + this.status;
+
+               var pessoas = JSON.parse(this.responseText);
+               var divPessoas = document.getElementById("pessoas");
+
+               for(let i = 0; i <=pessoas.length; i++){
+
+                   divPessoas.innerHTML+=`
+                   <div style="border: 1px solid black">
+                    <p> Nome: ${pessoas[i].nome}</p>
+                    <p> Idade: ${pessoas[i].idade}</p>
+                    <p> Profissao: ${pessoas[i].profissao}</p>
+                    <p> Salario: ${pessoas[i].salario}</p>
+                    </div>
+                    `
+                    }
+            }
+            if(this.readyState == 4 && this.status == 404) {
+                alert("Arquivo não encontrado");
+            }
+        }
+
+        xhttp.open("GET","pessoas.json",true);
+        xhttp.send();
+    </script>
+</body>
+</html>
