@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        .filmes{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .poster{
+            height: 300px;
+            width: 100px;
+        }
+        img{
+            height: 100px;
+        }
+    </style>
+    </head>
+    <body>
+        <input type="text" id="key">
+        <button>Buscar</button>
+        <div class="filmes"></div>
+        <script>
+        
+        let inputText = document.querySelector("#key");
+        document.querySelector("button").addEventListener("click", () => {
+            document.querySelector(".filmes").innerHTML="";
+            buscaFilmes(inputText.value);
+        })
+        
+        function buscaFilmes(key){
+            var apikey = "126572b0";
+            url = `http://www.omdbapi.com/?s=${key}&apikey=`+apikey;
+            fetch(url)
+            .then(response => response.json())
+            .then(dados => {
+                console.log(dados)
+                dados.Search.forEach(filme => {
+                    document.querySelector(".filmes").innerHTML+=posterFilme(filme);
+                    
+                });
+            })
+        }
+
+        function posterFilme(json) {
+            poster = `
+                <div class="poster">
+                    <h2> ${json.Title} </h2>
+                    <img src="${json.Poster}">
+                    <p> Ano: ${json.Year} </p>
+                    <p> Tipo: ${json.Type} </p>
+                    </div>
+            `
+
+            return poster;
+        }
+    </script>
+    </body>
+</html>
