@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="pessoas"></div>
+        <script>
+        var divPessoas = document.getElementById("pessoas");
+
+        var p = fetch("pessoas.json")
+        .then(response=>response.json())// retorno é um JSON
+        .then(pessoas=>{  
+            for(let i = 0; i <=pessoas.length; i++){
+
+        divPessoas.innerHTML+=`
+            <div style="border: 1px solid black">
+             <p> Nome: ${pessoas[i].nome}</p>
+             <p> Idade: ${pessoas[i].idade}</p>
+             <p> Profissao: ${pessoas[i].profissao}</p>
+             <p> Salario: ${pessoas[i].salario}</p>
+             </div>
+             `
+             }
+        
+             return pessoas;
+            }).then((d) => {
+                console.log(d[0].nome);
+                console.log(d[1].nome);
+            })
+
+        
+    </script>
+    </body>
+</html>
